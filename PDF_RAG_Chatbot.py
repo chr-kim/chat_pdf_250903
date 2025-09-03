@@ -2,7 +2,7 @@
 import streamlit as st
 import os
 import tempfile
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings, ChatOpenAI
@@ -24,11 +24,11 @@ st.set_page_config(
 )
 
 # 3. 환경 변수 및 API 키 설정
-@st.cache_data
-def load_environment():
+#@st.cache_data
+#def load_environment():
     """환경변수 로드"""
-    load_dotenv()
-    return os.getenv("OPENAI_API_KEY")
+#    load_dotenv()
+#    return os.getenv("OPENAI_API_KEY")
 
 # 4. PDF 처리 함수들 (기존과 동일)
 @st.cache_data
